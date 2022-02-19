@@ -1,21 +1,19 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AvatarAnimationController : MonoBehaviour
 {
     [SerializeField] private AvatarImporter avatarImporter;
 
+    [SerializeField] private RuntimeAnimatorController idleController;
+    [SerializeField] private RuntimeAnimatorController walkingController;
+
     private Animator animator;
-    //[SerializeField] private AnimationClip[] animationClips;
-    [SerializeField] private RuntimeAnimatorController[] controllers;
-    //[SerializeField] private AnimatorOverrideController overrideController;
 
     private bool isAnimatorAssigned = false;
 
     private void Update()
     {
+        // make sure that the avatar is loaded before getting the Animator component
         if (avatarImporter.ImportedAvatar != null && !isAnimatorAssigned)
         {
             animator = avatarImporter.ImportedAvatar.transform.GetComponent<Animator>();
@@ -25,20 +23,13 @@ public class AvatarAnimationController : MonoBehaviour
 
     public void StartAnimation()
     {
-        animator.runtimeAnimatorController = controllers[0];
-        animator.Play("Walk");
-        Debug.Log("<<Play animation>>>>");
+        animator.runtimeAnimatorController = walkingController;
+        animator.Play("Walk"); // Passing the state name of walkingController Animator controller
     }
 
     public void StopAnimation()
     {
-        Debug.Log("<<Stop animation>>>>");
-
-        animator.runtimeAnimatorController = controllers[1];
-        animator.Play("Idle");
-
-
+        animator.runtimeAnimatorController = idleController;
+        animator.Play("Idle");// Passing the state name of idleController Animator controller
     }
-
-
 }
