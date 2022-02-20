@@ -228,7 +228,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 223974226}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9619243b0d66dc643b5aeaa5d5e572e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 3db6fda8ebe296642942c35b5576c451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   webView: {fileID: 1157340008}
@@ -443,8 +443,8 @@ GameObject:
   - component: {fileID: 843640807}
   - component: {fileID: 843640806}
   - component: {fileID: 843640805}
-  - component: {fileID: 843640804}
   - component: {fileID: 843640810}
+  - component: {fileID: 843640804}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -461,12 +461,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 843640803}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bf057fda5cca1846a8554c523f09d85, type: 3}
+  m_Script: {fileID: 11500000, guid: b9a1bdb9aced9854a97a9cef3d02c750, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   avatarImporter: {fileID: 223974227}
-  avatarAnimationController: {fileID: 843640810}
-  aRRaycastManager: {fileID: 843640805}
+  avatarController: {fileID: 9100000, guid: 0c01d1dd1b4532d4e8d6adef2620325d, type: 2}
 --- !u!114 &843640805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,11 +544,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 843640803}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdc4f8faa4534254abce345ca2ef2740, type: 3}
+  m_Script: {fileID: 11500000, guid: aa3568fe9fedb0243ad5396b15de24d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   avatarImporter: {fileID: 223974227}
-  avatarController: {fileID: 9100000, guid: 0c01d1dd1b4532d4e8d6adef2620325d, type: 2}
+  avatarAnimationController: {fileID: 843640804}
+  aRRaycastManager: {fileID: 843640805}
 --- !u!1 &1157340006
 GameObject:
   m_ObjectHideFlags: 0

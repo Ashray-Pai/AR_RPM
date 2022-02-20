@@ -40,13 +40,12 @@ public class ARTapToPlaceTest : MonoBehaviour
                 {
                     avatarGameObject.SetActive(true);
                     //For the 1st time set the GameObject to true and place it at that point 
-                    avatarGameObject.transform.position = hitPose.position;
                     avatarGameObject.transform.rotation = hitPose.rotation;
+                    avatarGameObject.transform.position = hitPose.position;
                 }
                 else
                 {
                     newPosition = hitPose.position;
-
                     // 1st turn towars the hit position
                     avatarGameObject.transform.LookAt(newPosition);
                     // then start the walking animation

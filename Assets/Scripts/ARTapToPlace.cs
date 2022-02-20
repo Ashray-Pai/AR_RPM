@@ -41,15 +41,12 @@ public class ARTapToPlace : MonoBehaviour
                 {
                     //For the 1st time set the GameObject to true and place it at that point
                     avatarImporter.ImportedAvatar.SetActive(true);
-                    avatarImporter.ImportedAvatar.transform.position = hitPose.position;
                     avatarImporter.ImportedAvatar.transform.rotation = hitPose.rotation;
-
-
+                    avatarImporter.ImportedAvatar.transform.position = hitPose.position;
                 }
                 else
                 {
                     newPosition = hitPose.position;
-
                     // 1st turn towars the hit position
                     avatarImporter.ImportedAvatar.transform.LookAt(newPosition);
                     // start the walking animation
@@ -62,8 +59,8 @@ public class ARTapToPlace : MonoBehaviour
         {
             // the position is chnaged using the equation avatarPos += (Target - avatarPos).normalized * speed * Time
             // it's normalized so that the velocity remains constant
-            avatarImporter.ImportedAvatar.transform.position += (newPosition - avatarImporter.ImportedAvatar.transform.position).normalized * 0.3f *
-                                                                      Time.deltaTime;
+            avatarImporter.ImportedAvatar.transform.position += (newPosition - avatarImporter.ImportedAvatar.transform.position).normalized 
+                                                                * 0.3f * Time.deltaTime;
             // 0.3 is a magic number to match the speed with the animation speed
         }
         else
