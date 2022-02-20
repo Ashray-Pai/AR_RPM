@@ -467,7 +467,6 @@ MonoBehaviour:
   avatarImporter: {fileID: 223974227}
   avatarAnimationController: {fileID: 843640810}
   aRRaycastManager: {fileID: 843640805}
-  poseDriver: {fileID: 1782758546}
 --- !u!114 &843640805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,8 +549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   avatarImporter: {fileID: 223974227}
-  idleController: {fileID: 9100000, guid: 608419d6339192f42bc44dffe92b11ee, type: 2}
-  walkingController: {fileID: 9100000, guid: de52ff86ba71ecb45ab7e6434615019a, type: 2}
+  avatarController: {fileID: 9100000, guid: 0c01d1dd1b4532d4e8d6adef2620325d, type: 2}
 --- !u!1 &1157340006
 GameObject:
   m_ObjectHideFlags: 0
