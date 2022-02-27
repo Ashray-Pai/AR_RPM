@@ -302,7 +302,6 @@ GameObject:
   - component: {fileID: 843640804}
   - component: {fileID: 843640811}
   - component: {fileID: 843640812}
-  - component: {fileID: 843640805}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -323,19 +322,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   avatarGameObject: {fileID: 505078610}
---- !u!114 &843640805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843640803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa17d122634046b4a8e23048891fafc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_RaycastPrefab: {fileID: 0}
 --- !u!114 &843640807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,8 +378,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   avatarGameObject: {fileID: 505078610}
   arCam: {fileID: 1782758543}
-  aRRaycastManager: {fileID: 843640805}
-  arPlaneDetection: {fileID: 843640812}
   OnNewTouch:
     m_PersistentCalls:
       m_Calls: []
