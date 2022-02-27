@@ -189,6 +189,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7241206338041725234, guid: d9cf3cc79b16c5e4c925a556dc0b21ec, type: 3}
   m_PrefabInstance: {fileID: 505078609}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &505078611 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7241206338041725236, guid: d9cf3cc79b16c5e4c925a556dc0b21ec, type: 3}
+  m_PrefabInstance: {fileID: 505078609}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,10 +298,11 @@ GameObject:
   - component: {fileID: 843640809}
   - component: {fileID: 843640808}
   - component: {fileID: 843640807}
-  - component: {fileID: 843640806}
-  - component: {fileID: 843640805}
   - component: {fileID: 843640810}
   - component: {fileID: 843640804}
+  - component: {fileID: 843640811}
+  - component: {fileID: 843640812}
+  - component: {fileID: 843640805}
   m_Layer: 0
   m_Name: AR Session Origin
   m_TagString: Untagged
@@ -330,20 +336,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RaycastPrefab: {fileID: 0}
---- !u!114 &843640806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843640803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f66da7470dce8f4d821d71dd2b1d4ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_DestroyOnRemoval: 1
-  m_VertexChangedThreshold: 0.01
 --- !u!114 &843640807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,7 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlanePrefab: {fileID: 1585201990951412, guid: d16dd8da7e4ccbe42b1b4a344a72ecbb, type: 3}
+  m_PlanePrefab: {fileID: 985734413524074184, guid: b797371071e17a84a90f79a6e7db9f35, type: 3}
   m_DetectionMode: 1
 --- !u!114 &843640808
 MonoBehaviour:
@@ -399,8 +391,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   avatarGameObject: {fileID: 505078610}
-  avatarAnimationController: {fileID: 843640804}
+  arCam: {fileID: 1782758543}
   aRRaycastManager: {fileID: 843640805}
+  arPlaneDetection: {fileID: 843640812}
+  OnNewTouch:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &843640811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843640803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4596c7c0392135943aea53280d5b96b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avatarAnimationController: {fileID: 843640804}
+  arTapToPlace: {fileID: 843640810}
+  avatarTransform: {fileID: 505078611}
+--- !u!114 &843640812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843640803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50337b9f09d3acb46a052ea6b7f2a191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arPlaneManager: {fileID: 843640807}
+  floorPrefab: {fileID: 7295763058261565593, guid: a3e32352669a5564a847d5efff64c794, type: 3}
 --- !u!1 &1639669671
 GameObject:
   m_ObjectHideFlags: 0
